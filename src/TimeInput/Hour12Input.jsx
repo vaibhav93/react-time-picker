@@ -29,7 +29,7 @@ export default function Hour12Input({
     return maxHourResult;
   })());
 
-  const minHour = safeMax(1, minTime && (() => {
+  const minHour = safeMax(0, minTime && (() => {
     const [minHourResult, minAmPm] = convert24to12(getHours(minTime));
 
     if (
